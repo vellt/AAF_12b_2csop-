@@ -6,23 +6,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace Dolgozat_Vezeteknev_Keresztnev
+namespace ConsoleApp15
 {
     class Program
     {
-        enum Szamolj { Maganhangzokat, Massalhangzokat, Kisbetuket }
+        enum Szamolj { Sbetuket , Szamokat , Nagybetuket }
         static void Main(string[] args)
         {
             string[] adatok = Feltolt();
             for (int i = 0; i < adatok.Length; i++)
             {
                 string adat = adatok[i];
-                if (Fizetes(adat) > 300_000) 
+                if (DomainVegzodes(adat).Length>=3)
                 {
                     Console.WriteLine($"Eredeti szöveg: {adat}");
-                    Console.WriteLine($"Magánhangzók száma: {Szamlalo(adat, Szamolj.Maganhangzokat)} db");
-                    Console.WriteLine($"Mássalhanzók száma: {Szamlalo(adat, Szamolj.Massalhangzokat)} db");
-                    Console.WriteLine($"Kisbetűk száma: {Szamlalo(adat, Szamolj.Kisbetuket)} db");
+                    Console.WriteLine($"S karakterek száma: {Szamlalo(adat,Szamolj.Sbetuket)} db");
+                    Console.WriteLine($"Szám karakterek száma: {Szamlalo(adat,Szamolj.Szamokat)} db");
+                    Console.WriteLine($"Nagybetűk száma: {Szamlalo(adat,Szamolj.Nagybetuket)} db");
                     Console.WriteLine("módosított szöveg:");
                     Console.WriteLine($"\t- transzformáció: {Modositott(adat)}");
                     Console.WriteLine($"\t- karakterhossza: {Modositott(adat).Length}");
@@ -34,63 +34,40 @@ namespace Dolgozat_Vezeteknev_Keresztnev
 
         private static string[] Feltolt()
         {
-            return File.ReadAllLines("berek.txt");
+            return File.ReadAllLines("domain_nevek.txt");
         }
 
         private static int Szamlalo(string szoveg, Szamolj szamolj)
         {
             int db = 0;
-
             for (int i = 0; i < szoveg.Length; i++)
             {
                 char karakter = szoveg[i];
                 switch (szamolj)
                 {
-                    case Szamolj.Maganhangzokat:
-                        if(
-                            karakter == 'a' ||
-                            karakter == 'A' ||
-                            karakter == 'e' ||
-                            karakter == 'E' ||
-                            karakter == 'i' ||
-                            karakter == 'I' ||
-                            karakter == 'o' ||
-                            karakter == 'O' ||
-                            karakter == 'u' ||
-                            karakter == 'U'
-                            )
+                    case Szamolj.Sbetuket:
+                        //if (karakter==115 || karakter==83)
+                        if (karakter=='s' || karakter=='S')
                         {
                             db++;
                         }
                         break;
-                    case Szamolj.Massalhangzokat:
-                        if (!(
-                            karakter == 'a' ||
-                            karakter == 'A' ||
-                            karakter == 'e' ||
-                            karakter == 'E' ||
-                            karakter == 'i' ||
-                            karakter == 'I' ||
-                            karakter == 'o' ||
-                            karakter == 'O' ||
-                            karakter == 'u' ||
-                            karakter == 'U' ||
-                            karakter == ' ' ||
-                            karakter>='0' && karakter<='9'
-                            ))
+                    case Szamolj.Szamokat:
+                        //if (karakter>=48 & karakter<=57)
+                        if (karakter>='0' & karakter<='9')
                         {
                             db++;
                         }
                         break;
-                    case Szamolj.Kisbetuket:
-                        if(karakter>='a' && karakter <= 'z')
+                    case Szamolj.Nagybetuket:
+                        //if (karakter>=65 && karakter<=90)
+                        if (karakter>='A' && karakter<='Z')
                         {
                             db++;
                         }
                         break;
                 }
             }
-
             return db;
         }
 
@@ -100,28 +77,26 @@ namespace Dolgozat_Vezeteknev_Keresztnev
             for (int i = szoveg.Length - 1; i >= 0; i--)
             {
                 char karakter = szoveg[i];
-                if(!(karakter>='A' && karakter<='Z' || karakter==' '))
+                if (!(karakter>='0' && karakter<='9' || karakter=='.' || karakter=='-'))
                 {
-                    if(karakter>='a' && karakter<='z')
+                    if (karakter>='A' && karakter<='Z')
                     {
-                        ujSzoveg += (char)(karakter-32); // kicsiből-->nagybetűs karakter
-                        ujSzoveg += '|';
+                        ujSzoveg += (char)(karakter + 32);
                     }
                     else
                     {
-                        ujSzoveg += karakter; // szám karakter
-                        ujSzoveg += '|';
+                        ujSzoveg += karakter;
                     }
+                    ujSzoveg += "|";
                 }
             }
             return ujSzoveg;
         }
 
-        private static int Fizetes(string szoveg)
+        private static string DomainVegzodes(string szoveg)
         {
             string forditott = "";
-
-            for (int i = szoveg.Length - 1; szoveg[i]!=' '; i--)
+            for (int i = szoveg.Length - 1; szoveg[i]!='.'; i--)
             {
                 forditott += szoveg[i];
             }
@@ -132,7 +107,7 @@ namespace Dolgozat_Vezeteknev_Keresztnev
                 visszaforditott += forditott[i];
             }
 
-            return Convert.ToInt32(visszaforditott);
+            return visszaforditott;
         }
     }
 }
