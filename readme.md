@@ -6,26 +6,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace ConsoleApp15
+namespace Konyvek
 {
     class Program
     {
-        enum Szamolj { Sbetuket , Szamokat , Nagybetuket }
+        enum Szamolj { Szokozoket, Massalhangzokat, Betuket }
         static void Main(string[] args)
         {
             string[] adatok = Feltolt();
             for (int i = 0; i < adatok.Length; i++)
             {
                 string adat = adatok[i];
-                if (DomainVegzodes(adat).Length>=3)
+                if (Szerzo(adat).Length<=10)
                 {
                     Console.WriteLine($"Eredeti szöveg: {adat}");
-                    Console.WriteLine($"S karakterek száma: {Szamlalo(adat,Szamolj.Sbetuket)} db");
-                    Console.WriteLine($"Szám karakterek száma: {Szamlalo(adat,Szamolj.Szamokat)} db");
-                    Console.WriteLine($"Nagybetűk száma: {Szamlalo(adat,Szamolj.Nagybetuket)} db");
+                    Console.WriteLine($"Szóközök száma: {Szamlalo(adat, Szamolj.Szokozoket)} db");
+                    Console.WriteLine($"Mássalhangzók száma: {Szamlalo(adat, Szamolj.Massalhangzokat)} db");
+                    Console.WriteLine($"Betűk száma: {Szamlalo(adat, Szamolj.Betuket)} db");
                     Console.WriteLine("módosított szöveg:");
-                    Console.WriteLine($"\t- transzformáció: {Modositott(adat)}");
-                    Console.WriteLine($"\t- karakterhossza: {Modositott(adat).Length}");
+                    Console.WriteLine($"\t transzformáció: {Modositott(adat)}");
+                    Console.WriteLine($"\t karakterhossza: {Modositott(adat).Length}");
                     Console.WriteLine();
                 }
             }
@@ -34,7 +34,7 @@ namespace ConsoleApp15
 
         private static string[] Feltolt()
         {
-            return File.ReadAllLines("domain_nevek.txt");
+            return File.ReadAllLines("konyvek.txt");
         }
 
         private static int Szamlalo(string szoveg, Szamolj szamolj)
@@ -45,23 +45,32 @@ namespace ConsoleApp15
                 char karakter = szoveg[i];
                 switch (szamolj)
                 {
-                    case Szamolj.Sbetuket:
-                        //if (karakter==115 || karakter==83)
-                        if (karakter=='s' || karakter=='S')
+                    case Szamolj.Szokozoket:
+                        if (karakter==' ')
                         {
                             db++;
                         }
                         break;
-                    case Szamolj.Szamokat:
-                        //if (karakter>=48 & karakter<=57)
-                        if (karakter>='0' & karakter<='9')
+                    case Szamolj.Massalhangzokat:
+                        if (!(
+                            karakter=='a' ||
+                            karakter=='A' ||
+                            karakter=='e' ||
+                            karakter=='E' ||
+                            karakter=='i' ||
+                            karakter=='I' ||
+                            karakter=='u' ||
+                            karakter=='U' ||
+                            karakter=='o' ||
+                            karakter=='O' ||
+                            karakter==' ' ||
+                            karakter==',' ))
                         {
                             db++;
                         }
                         break;
-                    case Szamolj.Nagybetuket:
-                        //if (karakter>=65 && karakter<=90)
-                        if (karakter>='A' && karakter<='Z')
+                    case Szamolj.Betuket:
+                        if (karakter>='A' && karakter<='Z' || karakter>='a' && karakter<='z')
                         {
                             db++;
                         }
@@ -77,11 +86,11 @@ namespace ConsoleApp15
             for (int i = szoveg.Length - 1; i >= 0; i--)
             {
                 char karakter = szoveg[i];
-                if (!(karakter>='0' && karakter<='9' || karakter=='.' || karakter=='-'))
+                if (!(karakter>='A' && karakter<='Z' || karakter==' '))
                 {
-                    if (karakter>='A' && karakter<='Z')
+                    if (karakter>='a' && karakter<='z')
                     {
-                        ujSzoveg += (char)(karakter + 32);
+                        ujSzoveg += (char)(karakter - 32);
                     }
                     else
                     {
@@ -93,23 +102,20 @@ namespace ConsoleApp15
             return ujSzoveg;
         }
 
-        private static string DomainVegzodes(string szoveg)
+        private static string Szerzo(string szoveg)
         {
             string forditott = "";
-            for (int i = szoveg.Length - 1; szoveg[i]!='.'; i--)
+            for (int i = szoveg.Length - 1; szoveg[i]!=','; i--)
             {
                 forditott += szoveg[i];
             }
-
             string visszaforditott = "";
-            for (int i = forditott.Length - 1; i >= 0; i--)
+            for (int i = forditott.Length - 2; i >= 0; i--)
             {
                 visszaforditott += forditott[i];
             }
-
             return visszaforditott;
         }
     }
 }
-
 ```
