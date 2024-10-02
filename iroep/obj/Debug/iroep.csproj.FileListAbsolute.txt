@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\iroep\iroep\bin\Debug\iroep.exe.config
+C:\Users\user\source\repos\iroep\iroep\bin\Debug\iroep.exe
+C:\Users\user\source\repos\iroep\iroep\bin\Debug\iroep.pdb
+C:\Users\user\source\repos\iroep\iroep\obj\Debug\iroep.csprojAssemblyReference.cache
+C:\Users\user\source\repos\iroep\iroep\obj\Debug\MainWindow.g.cs
+C:\Users\user\source\repos\iroep\iroep\obj\Debug\App.g.cs
+C:\Users\user\source\repos\iroep\iroep\obj\Debug\iroep_MarkupCompile.cache
+C:\Users\user\source\repos\iroep\iroep\obj\Debug\iroep_MarkupCompile.lref
+C:\Users\user\source\repos\iroep\iroep\obj\Debug\MainWindow.baml
+C:\Users\user\source\repos\iroep\iroep\obj\Debug\iroep.g.resources
+C:\Users\user\source\repos\iroep\iroep\obj\Debug\iroep.Properties.Resources.resources
+C:\Users\user\source\repos\iroep\iroep\obj\Debug\iroep.csproj.GenerateResource.cache
+C:\Users\user\source\repos\iroep\iroep\obj\Debug\iroep.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\iroep\iroep\obj\Debug\iroep.exe
+C:\Users\user\source\repos\iroep\iroep\obj\Debug\iroep.pdb
