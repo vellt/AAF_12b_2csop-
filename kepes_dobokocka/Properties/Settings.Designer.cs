@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace iroep.Properties
+namespace kepes_dobokocka.Properties
 {
 
 

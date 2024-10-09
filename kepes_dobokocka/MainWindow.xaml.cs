@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace iroep
+namespace kepes_dobokocka
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,12 +23,14 @@ namespace iroep
         public MainWindow()
         {
             InitializeComponent();
-            betu.TextChanged += Betu_TextChanged;
+            hatter.MouseUp += Hatter_MouseUp;
         }
 
-        private void Betu_TextChanged(object sender, TextChangedEventArgs e)
+        private void Hatter_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            szam.Text = betu.Text.Length.ToString();
+            Random r = new Random();
+            int random = r.Next(1, 7);
+            kep.Source = new BitmapImage(new Uri($"dice{random}.png", UriKind.Relative));
         }
     }
 }
