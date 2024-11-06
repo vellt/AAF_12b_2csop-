@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp29", "WpfApp29\WpfApp29.csproj", "{A6DE77EF-530D-43AC-9334-F0D044B4D785}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storage", "Storage\Storage.csproj", "{5B9CBCF0-FE76-469C-8D81-FA325547CB10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A6DE77EF-530D-43AC-9334-F0D044B4D785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A6DE77EF-530D-43AC-9334-F0D044B4D785}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A6DE77EF-530D-43AC-9334-F0D044B4D785}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A6DE77EF-530D-43AC-9334-F0D044B4D785}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B9CBCF0-FE76-469C-8D81-FA325547CB10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B9CBCF0-FE76-469C-8D81-FA325547CB10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B9CBCF0-FE76-469C-8D81-FA325547CB10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B9CBCF0-FE76-469C-8D81-FA325547CB10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0881ED9A-0F46-41AA-A6D7-801790037417}
+		SolutionGuid = {C68C5D64-68B3-4BA0-B0E8-6AB51211D5F5}
 	EndGlobalSection
 EndGlobal
