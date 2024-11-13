@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kisertethaz"
         mc:Ignorable="d"
+        Icon="ghost.ico"
         WindowStartupLocation="CenterScreen"
         Title="Kísértetház" Height="550" Width="800" Background="AliceBlue">
     <Grid Margin="20">
@@ -29,19 +30,60 @@
             <TextBlock Name="szoveg3" Text="Melyiket nyitod ki?" FontSize="20" FontWeight="Bold"/>
         </StackPanel>
 
-        <TextBlock Grid.Row="0" Grid.Column="2" Text="Rekord: 0" Foreground="Orange" 
+        <TextBlock Name="rekordSzoveg" Grid.Row="0" Grid.Column="2" Text="Rekord: 0" Foreground="Orange" 
                    FontWeight="Black" HorizontalAlignment="Right"/>
         
         <!-- második sor-->
-        
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Image Name="szellem1" Source="ghost.png" Visibility="Hidden" Height="150" RenderTransformOrigin="0.5,0.5" Margin="-60,-1,60,185">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-25.789"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Name="ajto1" Source="door1.png" Height="200"/>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Image Name="szellem2" Source="ghost.png" Visibility="Hidden" Height="150" RenderTransformOrigin="0.5,0.5" Margin="-60,-1,60,185">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-25.789"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Name="ajto2" Source="door2.png" Height="200"/>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="2">
+            <Image Name="szellem3" Source="ghost.png" Visibility="Hidden" Height="150" RenderTransformOrigin="0.5,0.5" Margin="-60,-1,60,185">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-25.789"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Name="ajto3" Source="door3.png" Height="200"/>
+        </Grid>
+
         <!-- harmadik sor-->
         <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal"
                     HorizontalAlignment="Center">
-            <Button Content="Új játék" FontSize="15" Padding="6" FontWeight="Black" 
+            <Button Name="ujJatek" Content="Új játék" FontSize="15" Padding="6" FontWeight="Black" 
                     Foreground="Orange" Background="Yellow"/>
             <Button Name="temaModositas" Content="Téma" FontSize="15" Padding="6" FontWeight="Black" 
                     Foreground="Orange" Background="Yellow" Margin="10 0"/>
-            <TextBlock Text="Pontszámod: 0" FontSize="15" FontWeight="Black" 
+            <TextBlock Name="pontszamSzoveg" Text="Pontszámod: 0" FontSize="15" FontWeight="Black" 
                        Foreground="Orange" VerticalAlignment="Center" Width="130"/>
         </StackPanel>
     </Grid>
