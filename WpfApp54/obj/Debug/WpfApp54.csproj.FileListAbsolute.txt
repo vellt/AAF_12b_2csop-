@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\WpfApp54\WpfApp54\bin\Debug\WpfApp54.exe.config
+C:\Users\user\source\repos\WpfApp54\WpfApp54\bin\Debug\WpfApp54.exe
+C:\Users\user\source\repos\WpfApp54\WpfApp54\bin\Debug\WpfApp54.pdb
+C:\Users\user\source\repos\WpfApp54\WpfApp54\obj\Debug\WpfApp54.csprojAssemblyReference.cache
+C:\Users\user\source\repos\WpfApp54\WpfApp54\obj\Debug\MainWindow.g.cs
+C:\Users\user\source\repos\WpfApp54\WpfApp54\obj\Debug\App.g.cs
+C:\Users\user\source\repos\WpfApp54\WpfApp54\obj\Debug\WpfApp54_MarkupCompile.cache
+C:\Users\user\source\repos\WpfApp54\WpfApp54\obj\Debug\WpfApp54_MarkupCompile.lref
+C:\Users\user\source\repos\WpfApp54\WpfApp54\obj\Debug\MainWindow.baml
+C:\Users\user\source\repos\WpfApp54\WpfApp54\obj\Debug\WpfApp54.g.resources
+C:\Users\user\source\repos\WpfApp54\WpfApp54\obj\Debug\WpfApp54.Properties.Resources.resources
+C:\Users\user\source\repos\WpfApp54\WpfApp54\obj\Debug\WpfApp54.csproj.GenerateResource.cache
+C:\Users\user\source\repos\WpfApp54\WpfApp54\obj\Debug\WpfApp54.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\WpfApp54\WpfApp54\obj\Debug\WpfApp54.exe
+C:\Users\user\source\repos\WpfApp54\WpfApp54\obj\Debug\WpfApp54.pdb
