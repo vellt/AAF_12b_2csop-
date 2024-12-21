@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp54", "WpfApp54\WpfApp54.csproj", "{9FC1BB0E-EDD3-46D5-8189-F03FBACA0AC7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GyakLINQ", "GyakLINQ\GyakLINQ.csproj", "{D5F7A83C-7324-440C-8B70-32C2D99C3A9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9FC1BB0E-EDD3-46D5-8189-F03FBACA0AC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9FC1BB0E-EDD3-46D5-8189-F03FBACA0AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9FC1BB0E-EDD3-46D5-8189-F03FBACA0AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9FC1BB0E-EDD3-46D5-8189-F03FBACA0AC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5F7A83C-7324-440C-8B70-32C2D99C3A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5F7A83C-7324-440C-8B70-32C2D99C3A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5F7A83C-7324-440C-8B70-32C2D99C3A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5F7A83C-7324-440C-8B70-32C2D99C3A9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D5F7DAD4-D129-49A6-920D-0EDE75AFE6E8}
+		SolutionGuid = {BDFF7F80-30AE-410B-8540-BCB1F1EA721E}
 	EndGlobalSection
 EndGlobal
