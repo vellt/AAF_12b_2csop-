@@ -26,7 +26,15 @@ namespace WpfApp63
         {
             InitializeComponent();
             gomb.Click += Gomb_Click;
-            uzik = File.ReadAllLines("uzik.csv").ToList();
+            uzik = new List<string>()
+            {
+                "A BELSŐ SZÁMÍT",
+                "A CSILLAGOK FIGYELNEK",
+                "A DOLGOK JÓL HALADNAK",
+                "A FONTOS DOLGOKRÓL NE MONDJ LE",
+                "A KOCKA EL VAN VETVE",
+                "A LEGEGYSZERŰBB ÚT AZ EGYENES"
+            };
         }
 
         private void Gomb_Click(object sender, RoutedEventArgs e)
