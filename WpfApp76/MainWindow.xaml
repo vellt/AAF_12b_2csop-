@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfApp76.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp76"
+        mc:Ignorable="d"
+        Icon="images/logo.ico"
+        
+        Title="A nagy pénzrablás" Height="450" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Válasz ki egy karaktert" TextAlignment="Center" FontSize="20"/>
+            <ComboBox Name="varosokTallozo" Margin="0 10">
+                
+            </ComboBox>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="A kiválasztottad neve: "/>
+                <TextBlock Name="varosNev" Text="Moszkva" Foreground="Blue" FontWeight="Bold"/>
+            </StackPanel>
+            <Grid Name="kep" HorizontalAlignment="Center" Margin="0 10">
+                <TextBlock Text="*A választottad képe*"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
