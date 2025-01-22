@@ -39,22 +39,16 @@ namespace WpfApp76
                 new Varos() { Name="Helsinki",  Value= "Helsinki" },
                 new Varos() { Name="Professzor",  Value= "Professor" },
             };
-            foreach (var varos in varosok)
-            {
-                ComboBoxItem item = new ComboBoxItem();
-                item.Content = varos.Name;
-                item.Tag = varos.Value;
-                varosokTallozo.Items.Add(item);
-            }
 
-            //varosokTallozo.ItemsSource = varosok;
+            varosokTallozo.ItemsSource = varosok;
+            varosokTallozo.DisplayMemberPath = "Name";
             varosokTallozo.SelectionChanged += VarosokTallozo_SelectionChanged;
         }
 
         private void VarosokTallozo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string magyar = (varosokTallozo.SelectedItem as ComboBoxItem).Content.ToString();
-            string angol = (varosokTallozo.SelectedItem as ComboBoxItem).Tag.ToString();
+            string magyar = (varosokTallozo.SelectedItem as Varos).Name;
+            string angol = (varosokTallozo.SelectedItem as Varos).Value;
             varosNev.Text = magyar;
             Image image = new Image();
             image.Height = 200;
