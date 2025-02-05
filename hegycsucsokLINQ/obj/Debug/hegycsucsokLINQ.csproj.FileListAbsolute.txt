@@ -1,7 +1,0 @@
-C:\Users\user\source\repos\hegycsucsokLINQ\hegycsucsokLINQ\bin\Debug\hegycsucsokLINQ.exe.config
-C:\Users\user\source\repos\hegycsucsokLINQ\hegycsucsokLINQ\bin\Debug\hegycsucsokLINQ.exe
-C:\Users\user\source\repos\hegycsucsokLINQ\hegycsucsokLINQ\bin\Debug\hegycsucsokLINQ.pdb
-C:\Users\user\source\repos\hegycsucsokLINQ\hegycsucsokLINQ\obj\Debug\hegycsucsokLINQ.csprojAssemblyReference.cache
-C:\Users\user\source\repos\hegycsucsokLINQ\hegycsucsokLINQ\obj\Debug\hegycsucsokLINQ.csproj.CoreCompileInputs.cache
-C:\Users\user\source\repos\hegycsucsokLINQ\hegycsucsokLINQ\obj\Debug\hegycsucsokLINQ.exe
-C:\Users\user\source\repos\hegycsucsokLINQ\hegycsucsokLINQ\obj\Debug\hegycsucsokLINQ.pdb

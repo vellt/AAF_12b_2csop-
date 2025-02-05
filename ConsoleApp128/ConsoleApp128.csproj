@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A6FDCA51-6FB8-4B6D-B16A-FAB0CD78F82F}</ProjectGuid>
+    <ProjectGuid>{00A98464-57C4-4BB6-BD8E-AEA1CC75544B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>hegycsucsokLINQ</RootNamespace>
-    <AssemblyName>hegycsucsokLINQ</AssemblyName>
+    <RootNamespace>ConsoleApp128</RootNamespace>
+    <AssemblyName>ConsoleApp128</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
