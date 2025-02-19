@@ -29,13 +29,32 @@ namespace WpfApp85
             InitializeComponent();
             dinoTallozo.ItemsSource = ReadData();
             dinoTallozo.DisplayMemberPath = "Nev";
-            dinoTallozo.SelectedIndex = 0;
+           
             dinoTallozo.SelectionChanged += DinoTallozo_SelectionChanged;
+            dinoTallozo.SelectedIndex = 0;
+            elozo.Click += Elozo_Click;
+            kovetkezo.Click += Kovetkezo_Click;
         }
 
         private void DinoTallozo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            Dino kivalasztottDino = dinoTallozo.SelectedItem as Dino;
+            dino1.Source = new BitmapImage(new Uri($"images/{kivalasztottDino.Kep}", UriKind.Relative));
+            dino2.Text = kivalasztottDino.Leiras;
             
+        }
+
+        private void Kovetkezo_Click(object sender, RoutedEventArgs e)
+        {
+            dinoTallozo.SelectedIndex++;
+        }
+
+        private void Elozo_Click(object sender, RoutedEventArgs e)
+        {
+            if (dinoTallozo.SelectedIndex>0)
+            {
+                dinoTallozo.SelectedIndex--;
+            }
         }
 
         List<Dino> ReadData()

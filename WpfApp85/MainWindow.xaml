@@ -27,22 +27,22 @@
 
         <!--Második sor-->
         <Grid Grid.Row="1" Grid.Column="0" Background="Green" Margin="10">
-            <Image Source="images/pic_large_allosaurus.gif" 
+            <Image Name="dino1" Source="images/pic_large_allosaurus.gif" 
                    Stretch="UniformToFill" Margin="5"/>
         </Grid>
 
         <Grid Grid.Row="1" Grid.Column="1" Background="Green" Margin="10">
             <ScrollViewer>
-                <TextBlock Text="szöveg..." FontSize="18" Foreground="White" Margin="5"/>
+                <TextBlock Name="dino2" TextWrapping="Wrap" Text="szöveg..." FontSize="18" Foreground="White" Margin="5"/>
             </ScrollViewer>
         </Grid>
 
         <!--harmadik sor-->
-        <Button Grid.Row="2" Grid.Column="0" Margin="10" Content="Előző"
+        <Button Name="elozo" Grid.Row="2" Grid.Column="0" Margin="10" Content="Előző"
                 FontWeight="Bold" FontSize="20" Background="Green" 
                 Foreground="White" />
         
-        <Button Grid.Row="2" Grid.Column="1" Margin="10" Content="Következő"
+        <Button Name="kovetkezo" Grid.Row="2" Grid.Column="1" Margin="10" Content="Következő"
                 FontWeight="Bold" FontSize="20" Background="Green" 
                 Foreground="White" />
     </Grid>
